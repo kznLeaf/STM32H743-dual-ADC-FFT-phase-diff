@@ -1,0 +1,33 @@
+# Keil 编译生成文件
+*.uvoptx
+*.uvguix.*
+*.bak
+*.hex
+*.axf
+*.elf
+*.bin
+*.lst
+*.lnp
+*.plg
+*.map
+*.sct
+*.crf
+*.d
+*.o
+*.dep
+
+# 编译输出目录（如果有）
+/build/
+/Debug/
+/Release/
+
+# CubeMX 生成的 log 或临时文件
+MX_*.log
+
+# 操作系统无关的缓存文件
+.DS_Store
+Thumbs.db
+
+# vscode 或其他 IDE 生成的配置（如果使用）
+.vscode/
+.idea/
