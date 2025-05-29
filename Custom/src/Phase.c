@@ -42,7 +42,7 @@ void PhaseCalculate_ADC_Init(ADC_HandleTypeDef *hadc1, ADC_HandleTypeDef *hadc2)
   HAL_ADC_Start(hadc2);
 
   // 启动多模式DMA采样，数据存到 ADC_Raw_Data
-  HAL_ADCEx_MultiModeStart_DMA(hadc1, (uint32_t *)ADC_Raw_Data, 1024);
+  HAL_ADCEx_MultiModeStart_DMA(hadc1, (uint32_t *)ADC_Raw_Data, FFT_LENGTH);
 }
 
 /**

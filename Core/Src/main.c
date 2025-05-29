@@ -27,7 +27,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "Phase.h"
-#include "stdio.h" 
+#include "stdio.h"
 
 /* USER CODE END Includes */
 
@@ -43,6 +43,8 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
+
+/* "D:\\cubeMx\\cubemx project\\H743_dual_ADC_synchronous_sample\\Drivers\\CMSIS\\DSP\\Include" */
 
 /* USER CODE END PM */
 
@@ -111,7 +113,14 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
-  PhaseCalculate_ADC_Init(&hadc1, &hadc2);
+  // PhaseCalculate_ADC_Init(&hadc1, &hadc2);
+
+  HAL_ADCEx_Calibration_Start(&hadc1, ADC_CALIB_OFFSET_LINEARITY, ADC_SINGLE_ENDED); 
+  HAL_ADCEx_Calibration_Start(&hadc2, ADC_CALIB_OFFSET_LINEARITY, ADC_SINGLE_ENDED); 
+
+  HAL_ADC_Start(&hadc2);
+  HAL_ADCEx_MultiModeStart_DMA(&hadc1, (uint32_t *)ADC_Raw_Data, 1024);
+
   printf("OK START!\n");
   /* USER CODE END 2 */
 
@@ -125,19 +134,18 @@ int main(void)
       if (HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_1) == GPIO_PIN_RESET)
       {
         HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_3);
-        while (HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_1) == GPIO_PIN_RESET);
+        while (HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_1) == GPIO_PIN_RESET)
+          ;
         printf("LETS GOOOOOOOOOOOOOOOOOOO\n");
 
-        HAL_TIM_Base_Start(&htim8); 
+        HAL_TIM_Base_Start(&htim8);
       }
     }
 
-    if(ADC_COMPLETED) {
-      printf("phaseDifference: %f\n",Get_PhaseDifference());
+    if (ADC_COMPLETED)
+    {
+      printf("phaseDifference: %f\n", Get_PhaseDifference());
     }
-
-
-
 
     /* USER CODE END WHILE */
 
