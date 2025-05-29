@@ -10,13 +10,11 @@
                 "d:\\cubeMx\\cubemx project\\H743_dual_ADC_synchronous_sample\\Drivers\\CMSIS\\Include",
                 "d:\\cubeMx\\cubemx project\\H743_dual_ADC_synchronous_sample\\Custom\\src",
                 "d:\\cubeMx\\cubemx project\\H743_dual_ADC_synchronous_sample\\Custom\\inc",
-                "d:\\cubeMx\\cubemx project\\H743_dual_ADC_synchronous_sample\\Middlewares\\ST\\ARM\\DSP\\Inc",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include",
                 "C:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
                 "d:\\cubeMx\\cubemx project\\H743_dual_ADC_synchronous_sample\\MDK-ARM",
                 "d:\\cubeMx\\cubemx project\\H743_dual_ADC_synchronous_sample\\Core\\Src",
-                "d:\\cubeMx\\cubemx project\\H743_dual_ADC_synchronous_sample\\Drivers\\STM32H7xx_HAL_Driver\\Src",
-                "D:\\cubeMx\\cubemx project\\H743_dual_ADC_synchronous_sample\\Drivers\\CMSIS\\DSP\\Include"
+                "d:\\cubeMx\\cubemx project\\H743_dual_ADC_synchronous_sample\\Drivers\\STM32H7xx_HAL_Driver\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
