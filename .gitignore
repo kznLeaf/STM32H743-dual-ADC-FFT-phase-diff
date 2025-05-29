@@ -1,33 +1,52 @@
-# Keil 编译生成文件
-*.uvoptx
-*.uvguix.*
-*.bak
-*.hex
-*.axf
-*.elf
-*.bin
-*.lst
-*.lnp
-*.plg
-*.map
-*.sct
-*.crf
+# Prerequisites
 *.d
+
+# Object files
 *.o
-*.dep
+*.ko
+*.obj
+*.elf
 
-# 编译输出目录（如果有）
-/build/
-/Debug/
-/Release/
+# Linker output
+*.ilk
+*.map
+*.exp
 
-# CubeMX 生成的 log 或临时文件
-MX_*.log
+# Precompiled Headers
+*.gch
+*.pch
 
-# 操作系统无关的缓存文件
-.DS_Store
-Thumbs.db
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
 
-# vscode 或其他 IDE 生成的配置（如果使用）
-.vscode/
-.idea/
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf

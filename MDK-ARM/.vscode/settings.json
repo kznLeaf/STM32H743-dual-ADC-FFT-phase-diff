@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "main.h": "c",
+        "arm_const_structs.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled",
+  
+}
