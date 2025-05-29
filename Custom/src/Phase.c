@@ -150,6 +150,7 @@ void Process_ADC_RawData(void)
       // 将原始 ADC 值换算为实际电压
       ADC_1_Real_Value[i] = ((float32_t)adc1 - 32768.0f) * Reference_Voltage / 65536.0f;
       ADC_2_Real_Value[i] = ((float32_t)adc2 - 32768.0f) * Reference_Voltage / 65536.0f;
+      // printf("%f, %f\n",(double)ADC_1_Real_Value[i],(double)ADC_2_Real_Value[i]);
     }
   }
 }
@@ -166,8 +167,8 @@ float32_t Get_PhaseDifference(void)
   Process_ADC_RawData();
 
   // 使用原始 ADC 数据计算两个通道的相位角
-  float32_t phase1 = Find_PhaseAngle((float32_t *)ADC_1_Value_DMA);
-  float32_t phase2 = Find_PhaseAngle((float32_t *)ADC_2_Value_DMA);
+  float32_t phase1 = Find_PhaseAngle(ADC_1_Real_Value);
+  float32_t phase2 = Find_PhaseAngle(ADC_2_Real_Value);
 
   // 计算相位差（相位1 - 相位2）
   float32_t phase_diff = phase1 - phase2;

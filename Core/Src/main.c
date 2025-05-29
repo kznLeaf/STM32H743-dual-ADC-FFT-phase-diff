@@ -113,13 +113,8 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
-  // PhaseCalculate_ADC_Init(&hadc1, &hadc2);
 
-  HAL_ADCEx_Calibration_Start(&hadc1, ADC_CALIB_OFFSET_LINEARITY, ADC_SINGLE_ENDED); 
-  HAL_ADCEx_Calibration_Start(&hadc2, ADC_CALIB_OFFSET_LINEARITY, ADC_SINGLE_ENDED); 
-
-  HAL_ADC_Start(&hadc2);
-  HAL_ADCEx_MultiModeStart_DMA(&hadc1, (uint32_t *)ADC_Raw_Data, 1024);
+  PhaseCalculate_ADC_Init(&hadc1, &hadc2);
 
   printf("OK START!\n");
   /* USER CODE END 2 */
@@ -136,7 +131,7 @@ int main(void)
         HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_3);
         while (HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_1) == GPIO_PIN_RESET)
           ;
-        printf("LETS GOOOOOOOOOOOOOOOOOOO\n");
+        printf("LETS GO\n");
 
         HAL_TIM_Base_Start(&htim8);
       }
@@ -247,7 +242,7 @@ void PeriphCommonClock_Config(void)
 // 回调函数
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
-  printf("采样停止\n");
+  // printf("采样停止\n");
   HAL_TIM_Base_Stop(&htim8); // 停止 ADC 采样
   ADC_COMPLETED = 1;         // 标志位置为一
 }
