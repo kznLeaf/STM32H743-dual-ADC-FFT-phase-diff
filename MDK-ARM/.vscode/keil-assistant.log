@@ -8,3 +8,18 @@
 
 [info] Log at : 2025/5/29|12:06:15|GMT+0800
 
+[info] Log at : 2025/5/29|12:29:16|GMT+0800
+
+[SyntaxError: Unexpected token '/', ..."          /* "D:\\cu"... is not valid JSON
+	at JSON.parse (<anonymous>)
+	at F.updateCppProperties (c:\Users\24996\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:10849)
+	at F.<anonymous> (c:\Users\24996\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:12579)
+	at Generator.next (<anonymous>)
+	at c:\Users\24996\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:4480
+	at new Promise (<anonymous>)
+	at r (c:\Users\24996\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:4225)
+	at F.load (c:\Users\24996\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:11310)
+	at w.<anonymous> (c:\Users\24996\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:8737)
+	at Generator.next (<anonymous>)
+	at a (c:\Users\24996\.vscode\extensions\cl.keil-assistant-1.7.0\dist\extension.js:1:4282)
+	at process.processTicksAndRejections (node:internal/process/task_queues:95:5)]
