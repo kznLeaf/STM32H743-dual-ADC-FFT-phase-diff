@@ -26,7 +26,7 @@ Dual ADC synchronous sampling and phase difference calculation using FFT on STM3
   - PC7：USART6_RX 用于在串口上显示计算结果
   - PA13和PA14用于DEBUG
 
-
+双ADC模式的实现原理以及 CubeMX 的具体配置详见[这篇博客](https://www.cnblogs.com/Banyee/p/18340625#5332728)。
 
 ## 软件信息
 
