@@ -5,7 +5,11 @@ Dual ADC synchronous sampling and phase difference calculation using FFT on STM3
 
 ## 简介
 
-本工程演示了如何使用STM32H7系列单片机的**双ADC同步采样模式**，结合HAL库和CubeMX进行配置，并实现基于CMSIS-DSP库的FFT函数的**信号相位差计算**。
+本工程演示了如何使用STM32H7系列单片机的**双ADC同步采样模式**，结合HAL库和CubeMX进行配置，并实现基于CMSIS-DSP库的FFT函数的**信号相位差计算**。直接上测试结果：
+
+![TestResults](TestResults.png)
+
+最大采样率可以拉到1.5MHz左右。
 
 ## 功能
 
